@@ -13,8 +13,8 @@ import CheckList from '@editorjs/checklist'
 import Delimiter from '@editorjs/delimiter'
 import InlineCode from '@editorjs/inline-code'
 import SimpleImage from '@editorjs/simple-image'
-import AlignmentTuneTool from 'editorjs-text-alignment-blocktune'
 
+const AlignmentTuneTool = require('editorjs-text-alignment-blocktune');
 
 export const EDITOR_JS_TOOLS = {
   embed: Embed,
@@ -26,11 +26,28 @@ export const EDITOR_JS_TOOLS = {
   linkTool: LinkTool,
   image: Image,
   raw: Raw,
-  header: Header,
+  header: {
+    class: Header,
+    inlineToolbar: ['link'],
+    tunes: ['anyTuneName'],
+    config: {
+      placeholder: 'Header'
+    },
+    shortcut: 'CMD+SHIFT+H'
+  },
   quote: Quote,
   checklist: CheckList,
   delimiter: Delimiter,
   inlineCode: InlineCode,
   simpleImage: SimpleImage,
-  alignment: AlignmentTuneTool,
-}
+  anyTuneName: {
+    class: AlignmentTuneTool,
+    config: {
+      default: "right",
+      blocks: {
+        header: 'center',
+        list: 'right'
+      }
+    },
+  }
+};

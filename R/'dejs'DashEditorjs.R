@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-'dejs'DashEditorjs <- function(id=NULL, label=NULL, value=NULL) {
+'dejs'DashEditorjs <- function(id=NULL, label=NULL, tools=NULL, value=NULL) {
     
-    props <- list(id=id, label=label, value=value)
+    props <- list(id=id, label=label, tools=tools, value=value)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@
         props = props,
         type = 'DashEditorjs',
         namespace = 'dash_editorjs',
-        propNames = c('id', 'label', 'value'),
+        propNames = c('id', 'label', 'tools', 'value'),
         package = 'dashEditorjs'
         )
 

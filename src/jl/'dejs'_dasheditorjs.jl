@@ -14,10 +14,11 @@ which is edit
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `label` (String; required): A label that will be printed when this component is rendered.
+- `tools` (Dict; optional): Tools for EditorJS
 - `value` (String; optional): The value displayed in the input.
 """
 function 'dejs'_dasheditorjs(; kwargs...)
-        available_props = Symbol[:id, :label, :value]
+        available_props = Symbol[:id, :label, :tools, :value]
         wild_props = Symbol[]
         return Component("'dejs'_dasheditorjs", "DashEditorjs", "dash_editorjs", available_props, wild_props; kwargs...)
 end

@@ -37,7 +37,10 @@ const DashEditorjs = (props) => {
     );
 }
 
-DashEditorjs.defaultProps = {};
+DashEditorjs.defaultProps = {
+    value: '',
+    tools: EDITOR_JS_TOOLS
+};
 
 DashEditorjs.propTypes = {
     /**
@@ -59,7 +62,13 @@ DashEditorjs.propTypes = {
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
      */
-    setProps: PropTypes.func
+    setProps: PropTypes.func,
+
+    /**
+     * Tools for EditorJS
+     */
+    tools: PropTypes.object
+
 };
 
 export default DashEditorjs;

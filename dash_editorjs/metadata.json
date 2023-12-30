@@ -23,7 +23,11 @@
           "name": "string"
         },
         "required": false,
-        "description": "The value displayed in the input."
+        "description": "The value displayed in the input.",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
       },
       "setProps": {
         "type": {
@@ -31,6 +35,17 @@
         },
         "required": false,
         "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+      },
+      "tools": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Tools for EditorJS",
+        "defaultValue": {
+          "value": "EDITOR_JS_TOOLS",
+          "computed": true
+        }
       }
     }
   }

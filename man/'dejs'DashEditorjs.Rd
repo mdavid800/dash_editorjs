@@ -10,13 +10,15 @@ ExampleComponent is an example component. It takes a property, `label`, and di
 }
 
 \usage{
-'dejs'DashEditorjs(id=NULL, label=NULL, value=NULL)
+'dejs'DashEditorjs(id=NULL, label=NULL, tools=NULL, value=NULL)
 }
 
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
 \item{label}{Character. A label that will be printed when this component is rendered.}
+
+\item{tools}{Named list. Tools for EditorJS}
 
 \item{value}{Character. The value displayed in the input.}
 }
