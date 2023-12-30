@@ -1,0 +1,78 @@
+{
+  "name": "dash_editorjs",
+  "version": "0.0.1",
+  "description": "dash component created from editor.js a block style rich text editor",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mdavid800/dash-editorjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdavid800/dash-editorjs/issues"
+  },
+  "homepage": "https://github.com/mdavid800/dash-editorjs",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.serve.config.js --open",
+    "validate-init": "python _validate_init.py",
+    "prepublishOnly": "npm run validate-init",
+    "build:js": "webpack --mode production",
+    "build:backends": "dash-generate-components ./src/lib/components dash_editorjs -p package-info.json --r-prefix 'dejs' --jl-prefix 'dejs' --ignore \\.test\\.",
+    "build:backends-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:backends)",
+    "build": "npm run build:js && npm run build:backends",
+    "build:activated": "npm run build:js && npm run build:backends-activated"
+  },
+  "author": "David McCracken <mdavid800@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@editorjs/checklist": "^1.6.0",
+    "@editorjs/code": "^2.9.0",
+    "@editorjs/delimiter": "^1.4.0",
+    "@editorjs/editorjs": "^2.28.2",
+    "@editorjs/embed": "^2.7.0",
+    "@editorjs/header": "^2.8.1",
+    "@editorjs/image": "^2.9.0",
+    "@editorjs/inline-code": "^1.5.0",
+    "@editorjs/link": "^2.6.2",
+    "@editorjs/list": "^1.9.0",
+    "@editorjs/marker": "^1.4.0",
+    "@editorjs/paragraph": "^2.11.3",
+    "@editorjs/quote": "^2.6.0",
+    "@editorjs/raw": "^2.5.0",
+    "@editorjs/simple-image": "^1.6.0",
+    "@editorjs/table": "^2.3.0",
+    "@editorjs/warning": "^1.4.0",
+    "editorjs-header-with-alignment": "^1.0.1",
+    "editorjs-text-alignment-blocktune": "^1.0.3",
+    "ramda": "^0.26.1",
+    "react-editor-js": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.22.2",
+    "@babel/preset-react": "^7.22.3",
+    "@plotly/dash-component-plugins": "^1.2.3",
+    "@plotly/webpack-dash-dynamic-import": "^1.2.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^9.1.2",
+    "copyfiles": "^2.1.1",
+    "css-loader": "^6.8.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-react": "^7.14.2",
+    "prop-types": "^15.8.1",
+    "react": "^16.8.6",
+    "react-docgen": "^5.4.3",
+    "react-dom": "^16.8.6",
+    "style-loader": "^3.3.3",
+    "styled-jsx": "^5.1.2",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "engines": {
+    "node": ">=8.11.0",
+    "npm": ">=6.1.0"
+  }
+}
