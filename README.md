@@ -4,6 +4,10 @@ Dash Editorjs is a Dash component library.
 
 dash component created from editor.js a block style rich text editor
 
+## To Do
+
+- [ ] Test save and establish how to use in dash 
+
 Get started with:
 1. Install Dash and its dependencies: https://dash.plotly.com/installation
 2. Run `python usage.py`
