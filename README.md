@@ -22,6 +22,8 @@ dash component created from editor.js a block style rich text editor
 
 - [ ] make sure tools can be added from python 
 
+- [ ] provide some examples 
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
