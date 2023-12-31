@@ -6,7 +6,11 @@ dash component created from editor.js a block style rich text editor
 
 ## To Do
 
+- [ ] Add additional props 
+
 - [ ] Test save and establish how to use in dash 
+
+- [ ] Test how to load data from JSON in dash 
 
 - [ ] update simple image tool to https://github.com/PaulKinlan/simple-image
 
