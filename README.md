@@ -8,10 +8,15 @@ dash component created from editor.js a block style rich text editor
 
 - [ ] Test save and establish how to use in dash 
 
-Get started with:
-1. Install Dash and its dependencies: https://dash.plotly.com/installation
-2. Run `python usage.py`
-3. Visit http://localhost:8050 in your web browser
+- [ ] update simple image tool to https://github.com/PaulKinlan/simple-image
+
+- [ ] understand how to use Image backend - or delete this tool. 
+
+- [ ] add colum tool 
+
+- [ ] add colour tool 
+
+- [ ] make sure tools can be added from python 
 
 ## Contributing
 
